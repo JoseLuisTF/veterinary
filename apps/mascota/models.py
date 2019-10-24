@@ -1,4 +1,5 @@
 from django.db import models
+from apps.usuario.models import Propietario
 
 # Create your models here.
 
@@ -27,9 +28,7 @@ class Mascota(models.Model):
     raza = models.ForeignKey(Raza, null=True, blank=True, on_delete=models.CASCADE)
     sexo = models.CharField(max_length=15)
     edad = models.IntegerField()
+    propietario = models.OneToManyField(Propietario, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return '{}'.format(self.alias)
-
-
-
