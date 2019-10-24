@@ -4,15 +4,21 @@ from django.db import models
 # Create your models here.
 
 class Propietario(models.Model):
-    id_propietario = models.AutoField(primary_key=True)
+    id_propietario = models.AutoField(max_length=5, primary_key=True)
     nombres = models.CharField(max_length=50)
+    cc = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)
     clave = models.CharField(max_length=50)
     edad = models.IntegerField()
-    sexo = models.CharField(max_length=15)
+
+    SEXOS = (
+            ('H', 'Hombre'),
+            ('M', 'Mujer'),
+    )
+
+    sexo = models.CharField(max_length=15, choices=SEXOS)
     celular = models.CharField(max_length=20)
     fecha_nacimiento = models.DateField()
-    emailufps = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
 
     def __str__(self):
@@ -27,14 +33,20 @@ class Administrador(models.Model):
     def __str__(self):
         return '{}'.format(self.usuario)
 
-class veterinario(models.Model):
+class Veterinario(models.Model):
     id_veterinario = models.AutoField(primary_key=True)
     email = models.CharField(max_length=50)
     clave = models.CharField(max_length=50)
     nombres = models.CharField(max_length=50)
+    cc = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)
     edad = models.IntegerField()
-    sexo = models.CharField(max_length=15)
+    SEXOS = (
+        ('H', 'Hombre'),
+        ('M', 'Mujer'),
+    )
+
+    sexo = models.CharField(max_length=15, choices=SEXOS)
     celular = models.CharField(max_length=20)
     fecha_nacimiento = models.DateField()
 

@@ -28,7 +28,7 @@ class Mascota(models.Model):
     raza = models.ForeignKey(Raza, null=True, blank=True, on_delete=models.CASCADE)
     sexo = models.CharField(max_length=15)
     edad = models.IntegerField()
-    propietario = models.OneToManyField(Propietario, null=True, blank=True, on_delete=models.CASCADE)
+    propietario = models.ForeignKey(Propietario, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return '{}'.format(self.alias)
