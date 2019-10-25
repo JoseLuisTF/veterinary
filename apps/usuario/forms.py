@@ -1,26 +1,30 @@
 from django import forms
 from apps.usuario.models import Propietario, Administrador, Veterinario
 
-
 class PropietarioForm(forms.ModelForm):
     class Meta:
         model = Propietario
         fields = '__all__'
         labels = {
-            'cc': 'Cédula',
             'nombres': 'Nombres',
             'apellidos': 'Apellidos',
-            'fecha_nacimiento': 'Fecha Nacimiento',
+            'cc': 'Cédula',
             'clave': 'Contraseña',
             'sexo': 'Sexo',
-            'celular': 'Teléfono Celular',
+            'edad': 'Edad',
             'email': 'Correo Electrónico',
-            'edad': 'Edad'
+            'celular': 'Teléfono Celular',
+            'fecha_nacimiento': 'Fecha Nacimiento',
         }
         widgets = {
+            'nombres': forms.TextInput(attrs={'class': 'form-control'}),
+            'apellidos': forms.TextInput(attrs={'class': 'form-control'}),
             'cc': forms.TextInput(attrs={'class': 'form-control'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-control'}),
-            'apellido': forms.TextInput(attrs={'class': 'form-control'}),
+            'clave': forms.TextInput(attrs={'class': 'form-control'}),
+            'sexo': forms.Select(attrs={'class': 'form-control'}),
+            'edad': forms.NumberInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'celular': forms.TextInput(attrs={'class': 'form-control'}),
             'fecha_nacimiento': forms.DateInput(attrs={'class': 'form-control'}),
         }
 
@@ -30,19 +34,24 @@ class VeterinarioForm(forms.ModelForm):
         model = Veterinario
         fields = '__all__'
         labels = {
-            'cc': 'Cédula',
             'nombres': 'Nombres',
             'apellidos': 'Apellidos',
-            'fecha_nacimiento': 'Fecha Nacimiento',
+            'cc': 'Cédula',
             'clave': 'Contraseña',
             'sexo': 'Sexo',
-            'celular': 'Teléfono Celular',
+            'edad': 'Edad',
             'email': 'Correo Electrónico',
-            'edad': 'Edad'
+            'celular': 'Teléfono Celular',
+            'fecha_nacimiento': 'Fecha Nacimiento',
         }
         widgets = {
+            'nombres': forms.TextInput(attrs={'class': 'form-control'}),
+            'apellidos': forms.TextInput(attrs={'class': 'form-control'}),
             'cc': forms.TextInput(attrs={'class': 'form-control'}),
-            'nombre': forms.TextInput(attrs={'class': 'form-control'}),
-            'apellido': forms.TextInput(attrs={'class': 'form-control'}),
+            'clave': forms.TextInput(attrs={'class': 'form-control'}),
+            'sexo': forms.Select(attrs={'class': 'form-control'}),
+            'edad': forms.NumberInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'celular': forms.TextInput(attrs={'class': 'form-control'}),
             'fecha_nacimiento': forms.DateInput(attrs={'class': 'form-control'}),
         }

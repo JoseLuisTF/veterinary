@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="{% static 'assets/vendor/fonts/circular-std/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/libs/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/vendor/fonts/fontawesome/css/fontawesome-all.css' %}">
+    {% block linkrel %}
+
+    {% endblock %}
 </head>
 
 <body>
@@ -82,10 +85,10 @@
                             <div id="submenu-3" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Agregar</a>
+                                        <a class="nav-link" href="{% url 'propietario_form' %}">Agregar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Listado</a>
+                                        <a class="nav-link" href="{% url 'propietario_listar' %}">Listado</a>
                                     </li>
                                 </ul>
                             </div>
@@ -111,10 +114,10 @@
                             <div id="submenu-5" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Listado</a>
+                                        <a class="nav-link" href="{% url 'veterinario_listar' %}">Listado</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Registrar</a>
+                                        <a class="nav-link" href="{% url 'veterinario_form' %}">Registrar</a>
                                     </li>
 
                                 </ul>
@@ -173,6 +176,9 @@
 <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
 <script src="{% static 'assets/vendor/slimscroll/jquery.slimscroll.js' %}"></script>
 <script src="{% static 'assets/libs/js/main-js.js' %}"></script>
+{% block scripts %}
+
+{% endblock %}
 </body>
 
 </html>
