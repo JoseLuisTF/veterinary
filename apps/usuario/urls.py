@@ -1,5 +1,6 @@
 from django.urls import path
-from apps.usuario.views import PropietarioCreate,PropietarioList,PropietarioDelete,PropietarioUpdate,PropietarioDetail, VeterinarioCreate, VeterinarioList
+from apps.usuario.views import PropietarioCreate, PropietarioList, PropietarioDelete, PropietarioUpdate, PropietarioDetail, \
+    VeterinarioCreate, VeterinarioList, VeterinarioUpdate, VeterinarioDetail, VeterinarioDelete
 
 urlpatterns = [
     path('Agregar_Propietario', (PropietarioCreate.as_view()), name='propietario_form'),
@@ -10,4 +11,7 @@ urlpatterns = [
 
     path('Agregar_Veterinario', VeterinarioCreate.as_view(), name='veterinario_form'),
     path('Listar_Veterinario', VeterinarioList.as_view(), name='veterinario_listar'),
+    path('Detalles_Veterinario/<pk>', VeterinarioDetail.as_view(), name='veterinario_detalles'),
+    path('Eliminar_Veterinario/<pk>', VeterinarioDelete.as_view(), name='veterinario_eliminar'),
+    path('Actualizar_Veterinario/<pk>', VeterinarioUpdate.as_view(), name='veterinario_actualizar'),
 ]

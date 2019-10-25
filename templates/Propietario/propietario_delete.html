@@ -2,7 +2,7 @@
 {% block content %}
     <form method="post">
         {% csrf_token %}
-        <h3>¿Desea eliminar el registro Propietario {{ propietario.nombres }} {{ propietario.apellidos }}?</h3>
+        <h3>¿Desea eliminar el registro del Propietario {{ propietario.nombres }} {{ propietario.apellidos }}?</h3>
         <button class="btn btn-danger" type="submit">Sí, eliminar</button>
         <a class="btn btn-dark" href="{% url 'propietario_listar' %}">Cancelar</a>
     </form>

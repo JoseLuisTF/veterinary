@@ -11,7 +11,7 @@
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven"
                                 aria-expanded="true" aria-controls="collapseSeven">
-                            <span class="fas fa-angle-down mr-3"></span>Informacion Propietario
+                            <span class="fas fa-angle-down mr-3"></span>Informacion Veterinario
                         </button>
                     </h5>
                 </div>
@@ -23,40 +23,40 @@
                                     <tbody>
                                     <tr>
                                         <th>Nombres</th>
-                                        <td>{{ propietario.nombres }}</td>
+                                        <td>{{ veterinario.nombres }}</td>
                                     </tr>
                                     <tr>
                                         <th>Apellidos</th>
-                                        <td>{{ propietario.apellidos }}</td>
+                                        <td>{{ veterinario.apellidos }}</td>
                                     </tr>
                                     <tr>
                                         <th>Cedula</th>
-                                        <td>{{ propietario.cc }}</td>
+                                        <td>{{ veterinario.cc }}</td>
                                     </tr>
                                     <tr>
                                         <th>Contraseña</th>
-                                        <td>{{ propietario.clave }}</td>
+                                        <td>{{ veterinario.clave }}</td>
                                     </tr>
                                     <tr>
                                         <th>Sexo</th>
-                                        <td>{{ propietario.sexo }}</td>
+                                        <td>{{ veterinario.sexo }}</td>
                                     </tr>
                                     <tr>
                                         <th>Teléfono Celular</th>
-                                        <td>{{ propietario.celular }}</td>
+                                        <td>{{ veterinario.celular }}</td>
                                     </tr>
                                     <tr>
                                         <th>Fecha Nacimiento</th>
-                                        <td>{{ propietario.fecha_nacimiento }}</td>
+                                        <td>{{ veterinario.fecha_nacimiento }}</td>
                                     </tr>
                                     <tr>
                                         <th>Email</th>
-                                        <td>{{ propietario.email }}</td>
+                                        <td>{{ veterinario.email }}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <a style="margin-top: 20px" href="{% url 'propietario_actualizar' propietario.pk %}"
+                            <a style="margin-top: 20px" href="{% url 'veterinario_actualizar' veterinario.pk %}"
                                class="btn btn-warning btn-xs">Editar</a>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
         </div>
     </div>
     <div class="text-center">
-        <a style="margin-top: 20px" href="{% url 'propietario_listar' %}" class="btn btn-dark">Atras</a>
-        <a style="margin-top: 20px" href="{% url 'propietario_eliminar' propietario.pk %}" class="btn btn-danger">Eliminar</a>
+        <a style="margin-top: 20px" href="{% url 'veterinario_listar' %}" class="btn btn-dark">Atras</a>
+        <a style="margin-top: 20px" href="{% url 'veterinario_eliminar' veterinario.pk %}" class="btn btn-danger">Eliminar</a>
     </div>
 {% endblock %}

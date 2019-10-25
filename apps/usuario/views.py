@@ -42,6 +42,16 @@ class VeterinarioDelete(DeleteView):
     template_name = 'Veterinario/veterinario_delete.html'
     success_url = reverse_lazy('veterinario_listar')
 
+class VeterinarioDetail(DetailView):
+    model = Veterinario
+    template_name = 'Veterinario/veterinario_details.html'
+
 class VeterinarioList(ListView):
     model = Veterinario
     template_name = 'Veterinario/veterinario_list.html'
+
+class VeterinarioUpdate(UpdateView):
+    model = Veterinario
+    form_class = VeterinarioForm
+    template_name = 'Veterinario/veterinario_home.html'
+    success_url = reverse_lazy('veterinario_listar')
