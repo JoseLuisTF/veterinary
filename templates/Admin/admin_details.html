@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}
+Información Administrador
+{% endblock %}
+{% block content %}
 
-</body>
-</html>
+    <div class="accrodion-regular" xmlns="http://www.w3.org/1999/html">
+        <div id="accordion3">
+
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven"
+                                aria-expanded="true" aria-controls="collapseSeven">
+                            <span class="fas fa-angle-down mr-3"></span>Informacion Propietario
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordion3">
+                    <div class="card-body">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped table-condensed table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <th>Nombres</th>
+                                        <td>{{ admin.usuario }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Apellidos</th>
+                                        <td>{{ admin.email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cedula</th>
+                                        <td>{{ admin.clave }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a style="margin-top: 20px" href="{% url 'admin_actualizar' admin.pk %}"
+                               class="btn btn-warning btn-xs">Editar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <a style="margin-top: 20px" href="{% url 'admin_listar' %}" class="btn btn-dark">Atras</a>
+        <a style="margin-top: 20px" href="{% url 'admin_eliminar' admin.pk %}" class="btn btn-danger">Eliminar</a>
+    </div>
+{% endblock %}

@@ -55,3 +55,18 @@ class VeterinarioForm(forms.ModelForm):
             'celular': forms.TextInput(attrs={'class': 'form-control'}),
             'fecha_nacimiento': forms.DateInput(attrs={'class': 'form-control'}),
         }
+
+class AdminForm(forms.ModelForm):
+    class Meta:
+        model = Administrador
+        fields = '__all__'
+        labels = {
+            'usuario': 'Usuario',
+            'clave': 'Contraseña',
+            'email': 'email',
+        }
+        widgets = {
+            'usuario': forms.TextInput(attrs={'class': 'form-control'}),
+            'clave': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+        }

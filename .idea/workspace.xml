@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a12e0460-b427-43f1-8575-ac28497d255a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuario/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuario/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuario/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuario/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuario/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuario/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuario/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuario/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Propietario/propietario_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Propietario/propietario_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/admin_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Admin/admin_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/admin_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Admin/admin_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/admin_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Admin/admin_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Propietario/propietario_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Propietario/propietario_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Propietario/propietario_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Propietario/propietario_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Veterinario/veterinario_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Veterinario/veterinario_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Veterinario/veterinario_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Veterinario/veterinario_details.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

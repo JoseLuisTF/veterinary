@@ -27,6 +27,7 @@ class Propietario(models.Model):
 class Administrador(models.Model):
     id_admin = models.AutoField(primary_key=True)
     usuario = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
     clave = models.CharField(max_length=50)
 
     def __str__(self):
