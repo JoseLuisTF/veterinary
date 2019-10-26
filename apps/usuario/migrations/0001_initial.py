@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Administrador',
             fields=[
                 ('id_admin', models.AutoField(primary_key=True, serialize=False)),
-                ('usuario', models.CharField(max_length=50)),
+                ('Usuario', models.CharField(max_length=50)),
                 ('clave', models.CharField(max_length=50)),
             ],
         ),
