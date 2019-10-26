@@ -15,9 +15,6 @@
                                 <th>Nombres</th>
                                 <th>Apellidos</th>
                                 <th>Cédula</th>
-                                <th>Sexo</th>
-                                <th>Celular</th>
-                                <th>Fecha de nacimiento</th>
                                 <th>Acciones</th>
                             </tr>
                             </thead>
@@ -27,9 +24,6 @@
                                     <td>{{ propietario.nombres }}</td>
                                     <td>{{ propietario.apellidos }}</td>
                                     <td>{{ propietario.cc }}</td>
-                                    <td>{{ propietario.sexo }}</td>
-                                    <td>{{ propietario.celular}}</td>
-                                    <td>{{ propietario.fecha_nacimiento }}</td>
                                     <td style="text-align: center">
                                         <a href="{% url 'propietario_detalles' propietario.pk %}"
                                            class="btn btn-sm btn-outline-primary">Info</a>

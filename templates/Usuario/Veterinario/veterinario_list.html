@@ -16,9 +16,6 @@
                                 <th>Nombres</th>
                                 <th>Apellidos</th>
                                 <th>Cédula</th>
-                                <th>Sexo</th>
-                                <th>Celular</th>
-                                <th>Fecha de Nacimiento</th>
                                 <th>Acciones</th>
                             </tr>
                             </thead>
@@ -29,9 +26,6 @@
                                     <td>{{ veterinario.nombres }}</td>
                                     <td>{{ veterinario.apellidos }}</td>
                                     <td>{{ veterinario.cc }}</td>
-                                    <td>{{ veterinario.sexo }}</td>
-                                    <td>{{ veterinario.celular}}</td>
-                                    <td>{{ veterinario.fecha_nacimiento }}</td>
                                     <td style="text-align: center">
                                         <a href="{% url 'veterinario_detalles' veterinario.pk %}"
                                            class="btn btn-sm btn-outline-primary">Info</a>

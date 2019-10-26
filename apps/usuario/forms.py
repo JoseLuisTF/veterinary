@@ -61,12 +61,12 @@ class AdminForm(forms.ModelForm):
         model = Administrador
         fields = '__all__'
         labels = {
-            'Usuario': 'Usuario',
+            'usuario': 'Usuario',
             'clave': 'Contraseña',
             'email': 'email',
         }
         widgets = {
-            'Usuario': forms.TextInput(attrs={'class': 'form-control'}),
+            'usuario': forms.TextInput(attrs={'class': 'form-control'}),
             'clave': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.TextInput(attrs={'class': 'form-control'}),
         }

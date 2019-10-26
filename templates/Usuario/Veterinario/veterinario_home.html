@@ -2,11 +2,13 @@
 {% block title %} Veterinario {% endblock %}
 
 {% block content %}
-<h1>REGISTRAR VETERINARIO</h1>
+<div class="container" style="max-width: 50%">
+	<h2>Registrar Veterinario</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-space btn-primary" >Guardar</button>
     </form>
+</div>
 
 {% endblock %}
