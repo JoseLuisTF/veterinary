@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a12e0460-b427-43f1-8575-ac28497d255a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Veterinary/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Veterinary/settings/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Veterinary/settings/local.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Veterinary/settings/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Veterinary/settings.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Veterinary/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Veterinary/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
@@ -109,6 +102,7 @@
       <workItem from="1572107804329" duration="6832000" />
       <workItem from="1572127213208" duration="1483000" />
       <workItem from="1572493089356" duration="2048000" />
+      <workItem from="1572495157528" duration="633000" />
     </task>
     <servers />
   </component>
