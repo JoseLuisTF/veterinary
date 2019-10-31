@@ -11,12 +11,12 @@ ALLOWED_HOSTS = ['veterinaryjoseluistf.herokuapp.com']
 
 DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'veterinary',
-            'USER': 'root',
-            'PASSWORD': '',
-            'HOST': 'localhost',
-            'PORT': '3306',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'd8ssbj7ba88718',
+            'USER': 'hhwhagxqpungln',
+            'PASSWORD': '053597db5f8be2bbe3b3a0ae110f4235681c75466a7499cc9eaa6580d8e2d6ec',
+            'HOST': 'ec2-54-83-33-14.compute-1.amazonaws.com',
+            'PORT': 5432,
         }
     }
 
