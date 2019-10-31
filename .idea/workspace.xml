@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a12e0460-b427-43f1-8575-ac28497d255a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Veterinary/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Veterinary/settings/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Veterinary/settings/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Veterinary/settings/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,7 +103,7 @@
       <workItem from="1572127213208" duration="1483000" />
       <workItem from="1572493089356" duration="2048000" />
       <workItem from="1572495157528" duration="3382000" />
-      <workItem from="1572499462249" duration="2268000" />
+      <workItem from="1572499462249" duration="2367000" />
     </task>
     <servers />
   </component>

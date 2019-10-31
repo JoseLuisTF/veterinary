@@ -2,7 +2,7 @@
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['veterinaryjoseluistf.herokuapp.com']
 
@@ -20,3 +20,4 @@ DATABASES = {
         }
     }
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, '../static'),)
