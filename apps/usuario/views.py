@@ -11,7 +11,7 @@ from apps.usuario.forms import PropietarioForm, VeterinarioForm, AdminForm
 class PropietarioCreate(CreateView):
     model = Propietario
     form_class = PropietarioForm
-    template_name = 'Usuario/Propietario/propietario_home.html'
+    template_name = 'Usuario/Propietario/propietario_form.html'
     success_url = reverse_lazy('propietario_listar')
 
 
@@ -27,7 +27,7 @@ class PropietarioDelete(DeleteView):
 class PropietarioUpdate(UpdateView):
     model = Propietario
     form_class = PropietarioForm
-    template_name = 'Usuario/Propietario/propietario_home.html'
+    template_name = 'Usuario/Propietario/propietario_form.html'
     success_url = reverse_lazy('propietario_listar')
 
 class PropietarioDetail(DetailView):
