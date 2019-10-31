@@ -12,7 +12,7 @@ from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Veterinary.settings.server')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Veterinary.settings.local')
 
 # application = get_wsgi_application()
 

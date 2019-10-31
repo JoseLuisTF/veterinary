@@ -2,7 +2,7 @@
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['veterinaryjoseluistf.herokuapp.com']
 
@@ -19,5 +19,9 @@ DATABASES = {
             'PORT': 5432,
         }
     }
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, '../static'),)
