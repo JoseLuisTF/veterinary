@@ -1,6 +1,7 @@
 from django import forms
 from apps.usuario.models import Propietario, Administrador, Veterinario
 
+
 class PropietarioForm(forms.ModelForm):
     class Meta:
         model = Propietario
@@ -55,6 +56,7 @@ class VeterinarioForm(forms.ModelForm):
             'celular': forms.TextInput(attrs={'class': 'form-control'}),
             'fecha_nacimiento': forms.DateInput(attrs={'class': 'form-control'}),
         }
+
 
 class AdminForm(forms.ModelForm):
     class Meta:

@@ -1,25 +1,22 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% block title  %} Iniciar Sesión {% endblock %}</title>
+    <title>Iniciar Sesion La Casona</title>
     <!-- Bootstrap CSS -->
-    {% block linkrel %}
     <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/vendor/fonts/circular-std/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/libs/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/vendor/fonts/fontawesome/css/fontawesome-all.css' %}">
-    {% endblock %}
     <style>
         html,
         body {
             height: 100%;
         }
-
         body {
             display: -ms-flexbox;
             display: flex;
@@ -35,14 +32,10 @@
 <!-- ============================================================== -->
 <!-- login page  -->
 <!-- ============================================================== -->
-<div class="container-fluid" style="max-width:800px">
-    <div class="card">
-            <div class="card-header text-center"><a class="navbar-brand" href="{% url 'home' %}">La Casona Clinica Veterinaria
-            <br> {% block usuario %}<h3>ADMIN</h3>{% endblock %}
-            </a><span
-                class="splash-description"></span></div>
+<div class="splash-container">
+    <div class="card ">
+        <div class="card-header text-center"><img src="/static/img/logo.png" height="70%" width="70%"></div>
         <div class="card-body">
-            {% block form %}
             <form method="post">
                 {% csrf_token %}
                 <div class="form-group">
@@ -59,7 +52,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar Sesion</button>
             </form>
-            {% endblock %}
+
         </div>
         <div class="card-footer bg-white p-0  ">
         </div>
@@ -70,10 +63,8 @@
 <!-- end login page  -->
 <!-- ============================================================== -->
 <!-- Optional JavaScript -->
-{% block extrajs %}
 <script src="{% static 'assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
-{% endblock %}
 </body>
 
 </html>

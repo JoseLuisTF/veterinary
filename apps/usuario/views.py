@@ -14,6 +14,7 @@ class PropietarioCreate(CreateView):
     template_name = 'Usuario/Propietario/propietario_home.html'
     success_url = reverse_lazy('propietario_listar')
 
+
 class PropietarioList(ListView):
     model = Propietario
     template_name = 'Usuario/Propietario/propietario_list.html'

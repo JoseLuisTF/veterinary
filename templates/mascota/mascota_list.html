@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+Listado Mascotas
+{% endblock %}
+{% block content %}
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Listado Mascotas</h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered first">
+                                    {% if object_list %}
+                                        <thead>
+                                            <tr>
+                                                <th>Alias</th>
+                                                <th>Especie</th>
+                                                <th>Raza</th>
+                                                <th>Edad</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for mascota in object_list %}
+                                                 <tr>
+                                                    <td>{{ mascota.alias }}</td>
+                                                    <td>{{ mascota.especie }}</td>
+                                                    <td>{{ mascota.raza }}</td>
+                                                    <td >{{ mascota.edad }}</td>
+                                                    <td style="text-align: center">
+                                                        <a href="{% url 'mascota_detalles' mascota.pk %}" class="btn btn-sm btn-outline-primary">Info</a>
+                                                        <a href="{% url 'mascota_actualizar' mascota.pk %}" class="btn btn-sm btn-outline-warning">Editar</a>
+                                                        <a href="{% url 'mascota_eliminar' mascota.pk %}" class="btn btn-sm btn-outline-danger">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </a></td>
+                                                </tr>
+                                            {% endfor %}
+                                        {% else %}
+                                             <h4>No hay registros de Mascotas</h4>
+                                        </tbody>
+                                    {% endif %}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock %}

@@ -26,7 +26,11 @@ class Mascota(models.Model):
     alias = models.CharField(max_length=15)
     especie = models.ForeignKey(Especie, null=True, blank=True, on_delete=models.CASCADE)
     raza = models.ForeignKey(Raza, null=True, blank=True, on_delete=models.CASCADE)
-    sexo = models.CharField(max_length=15)
+    SEXOS = (
+            ('M', 'Macho'),
+            ('H', 'Hembra'),
+    )
+    sexo = models.CharField(max_length=15, choices=SEXOS)
     edad = models.IntegerField()
     propietario = models.ForeignKey(Propietario, null=True, blank=True, on_delete=models.CASCADE)
 
