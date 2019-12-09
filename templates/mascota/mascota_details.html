@@ -4,44 +4,69 @@
 {% block content %}
 
     <div class="accrodion-regular">
-    <div id="accordion3">
+        <div id="accordion3">
 
-        <div class="card">
-            <div class="card-header" id="headingSeven">
-                <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"aria-controls="collapseSeven">
-                     <span class="fas fa-angle-down mr-3"></span>Informacion Mascota
-                    </button>
-                </h5>
-            </div>
-            <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordion3">
-                <div class="card-body">
-                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="table-responsive">
-                        <table  class="table table-hover table-striped table-condensed table-bordered">
-                            <tbody>
-                                 <tr>
-                                     <th>Alias</th>
-                                     <td>{{ mascota.alias }}</td>
-                                 </tr>
-                                <tr>
-                                    <th>Especie</th>
-                                    <td>{{ mascota.especie }}</td>
-                                </tr>
-                                 <tr>
-                                     <th>raza</th>
-                                     <td>{{ mascota.raza }}</td>
-                                 </tr>
-                            </tbody>
-                        </table>
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven"
+                                aria-expanded="true" aria-controls="collapseSeven">
+                            <span class="fas fa-angle-down mr-3"></span>Informacion Mascota
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordion3">
+                    <div class="card-body">
+                        <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+
+                            <div class="card" id="images">
+                                <div class="card-body">
+                                    <img src="{{ mascota.imagen.url }}" class="img-fluid mr-3" alt="Responsive image">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped table-condensed table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <th>Alias</th>
+                                        <td>{{ mascota.alias }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Especie</th>
+                                        <td>{{ mascota.especie }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>raza</th>
+                                        <td>{{ mascota.raza }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sexo</th>
+                                        <td>{{ mascota.sexo }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Edad</th>
+                                        <td>{{ mascota.edad }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Propietario</th>
+                                        <td>{{ mascota.propietario.first_name }} {{ mascota.propietario.last_name }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a style="margin-top: 20px" href="{% url 'mascota_actualizar' mascota.pk %}"
+                               class="btn btn-warning btn-xs">Editar</a>
+                        </div>
                     </div>
-                        <a style="margin-top: 20px" href="{% url 'mascota_actualizar' mascota.pk %}" class="btn btn-warning btn-xs">Editar</a>
-                </div>
+                        </div>
                 </div>
             </div>
         </div>
-        </div>
-</div>
+    </div>
 
     <div class="text-center">
         <a style="margin-top: 20px" href="{% url 'mascota_listar' %}" class="btn btn-dark">Atras</a>

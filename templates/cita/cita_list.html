@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}
+    Mis Citas
+{% endblock %}
+{% block content %}
+    <div class="row">
+        {% if generales %}
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card">
+                    <h5 class="card-header">Mis Citas</h5>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">Mascota</th>
+                                <th scope="col">Tipo de Cita</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for general in generales %}
+                                <tr>
+                                    <th scope="row">{{ general.mascota }}</th>
+                                    <td>{{ general.tipo_cita }}</td>
+                                    <td>{{ general.date }}</td>
+                                    <td>{{ general.time }}</td>
+                                </tr>
+                            {% endfor %}
+                            {% for estetica in esteticas %}
+                                <tr>
+                                    <th scope="row">{{ estetica.mascota }}</th>
+                                    <td>{{ estetica.tipo_cita }}</td>
+                                    <td>{{ estetica.date }}</td>
+                                    <td>{{ estetica.time }}</td>
+                                </tr>
+                            {% endfor %}
+                            {% for guarderia in guarderias %}
+                                <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Mascota</th>
+                                    <th scope="col">Tipo de Cita</th>
+                                    <th scope="col">Fecha inicio</th>
+                                    <th scope="col">Fecha fin</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <th scope="row">{{ guarderia.mascota }}</th>
+                                    <td>{{ guarderia.tipo_cita }}</td>
+                                    <td>{{ guarderia.date_inicio }}</td>
+                                    <td>{{ guarderia.date_fin }}</td>
+                                </tr>
+                                </table>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="alert alert-warning" role="alert">
+                    <h4>Aun no tienes ninguna cita agendada <a href="{% url 'general_agendar' %}">Registralas Aqui</a>
+                    </h4>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <div class="row">
+        <a href="{% url 'agendar' %}" class="btn btn-dark btn-block">Agenda tu Cita</a>
+    </div>
+{% endblock %}

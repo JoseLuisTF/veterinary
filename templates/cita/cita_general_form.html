@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}
-    Registrar Mascota
+    Agendar Cita
 {% endblock %}
 {% block content %}
-    <form method="post" enctype="multipart/form-data" id="mascotaForm" data-razas-url="{% url 'ajax_load_razas' %}">
+    <form method="post" id="CitaGeneralForm" data-hours-url="{% url 'ajax_load_hours' %}">
         {% csrf_token %}
-
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="card">
                     <div class="card-header">
-                        Informacion Basica
+                         Agendar Cita General
                     </div>
                     <div class="card-body">
                         {{ form.as_p }}
@@ -19,26 +18,24 @@
             </div>
         </div>
         <button type="submit" class="btn btn-space btn-primary">Guardar</button>
-        <a href="{% url 'mascota_listar' %}" class="btn btn-space btn-secondary">Cancelar</a>
+        <a href="{% url 'agendar' %}" class="btn btn-space btn-secondary">Cancelar</a>
     </form>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        $("#id_especie").change(function () {
-            var url = $("#mascotaForm").attr("data-razas-url");
-            var especieId = $(this).val();
+        $("#id_date").change(function () {
+            var url = $("#CitaGeneralForm").attr("data-hours-url");
+            var dateId = $(this).val();
 
             $.ajax({
                 url: url,
                 data: {
-                    'especie': especieId
+                    'date': dateId
                 },
                 success: function (data) {
-                    $("#id_raza").html(data);
+                    $("#id_time").html(data);
                 }
             });
 
         });
     </script>
-
 {% endblock %}

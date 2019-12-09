@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Iniciar Sesion La Casona</title>
+    <title>Iniciar Sesion</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/vendor/fonts/circular-std/style.css' %}">
@@ -17,6 +17,7 @@
         body {
             height: 100%;
         }
+
         body {
             display: -ms-flexbox;
             display: flex;
@@ -39,11 +40,12 @@
             <form method="post">
                 {% csrf_token %}
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="username" name="username" type="text" placeholder="Usuario"
-                           autocomplete="off">
+                    <input class="form-control form-control-lg" id="username" name="username" type="text"
+                           placeholder="Documento" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="password" name="password" type="password" placeholder="Contraseña">
+                    <input class="form-control form-control-lg" id="password" name="password" type="password"
+                           placeholder="Contraseña">
                 </div>
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
@@ -54,17 +56,27 @@
             </form>
 
         </div>
-        <div class="card-footer bg-white p-0  ">
-        </div>
-    </div>
-</div>
 
-<!-- ============================================================== -->
-<!-- end login page  -->
-<!-- ============================================================== -->
-<!-- Optional JavaScript -->
-<script src="{% static 'assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
-<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
+        <div class="card-footer bg-white p-0  " align="center">
+            <div class="card-footer-item card-footer-item-bordered">
+                <a href="{% url 'signup' %}" class="footer-link">¿Aun no tienes cuenta? <a href="{% url 'signup' %}"
+                                                                                           class="text-primary">Registrate</a></a>
+            </div>
+        </div>
+        <div class="card-footer bg-white p-0  " align="center">
+            <div class="card-footer-item card-footer-item-bordered">
+                <a href="#" class="footer-link">Inicio de Sesion <a href="#" class="text-info">Veterinarios</a></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- end login page  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <script src="{% static 'assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
 </body>
 
 </html>

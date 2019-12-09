@@ -1,5 +1,5 @@
 from django.db import models
-from apps.usuario.models import Propietario
+from apps.usuario.models import Profile
 
 # Create your models here.
 
@@ -22,7 +22,7 @@ class Raza(models.Model):
 
 
 class Mascota(models.Model):
-    id_raza = models.AutoField(primary_key=True)
+    id_mascota = models.AutoField(primary_key=True)
     alias = models.CharField(max_length=15)
     especie = models.ForeignKey(Especie, null=True, blank=True, on_delete=models.CASCADE)
     raza = models.ForeignKey(Raza, null=True, blank=True, on_delete=models.CASCADE)
@@ -32,7 +32,8 @@ class Mascota(models.Model):
     )
     sexo = models.CharField(max_length=15, choices=SEXOS)
     edad = models.IntegerField()
-    propietario = models.ForeignKey(Propietario, null=True, blank=True, on_delete=models.CASCADE)
+    propietario = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.CASCADE)
+    imagen = models.ImageField(null=True, blank=True, upload_to='mascotas/')
 
     def __str__(self):
         return '{}'.format(self.alias)

@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="{% static 'assets/vendor/fonts/circular-std/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/libs/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/vendor/fonts/fontawesome/css/fontawesome-all.css' %}">
-    {% block linkrel %}
-
-    {% endblock %}
 </head>
 
 <body>
@@ -27,7 +24,7 @@
     <!-- ============================================================== -->
     <div class="dashboard-header">
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
-            <a class="navbar-brand" href="{% url 'home' %}" style="color:#191461">ADMINISTRATIVO</a>
+            <a class="navbar-brand" href="{% url 'mascota_listar' %}" style="color:#191461">La Casona</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +32,8 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-right-top">
                     <li class="nav-item dropdown nav-user">
-                        <a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-power-off mr-2"></i>Cerrar Sesion</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-power-off mr-2"></i>Cerrar
+                            Sesion</a>
                     </li>
                 </ul>
             </div>
@@ -60,71 +58,24 @@
                         <li class="nav-divider">
                             Menu
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}" aria-expanded="false"
-                               data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-home"></i>Inicio</a>
-                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                               data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-paw"></i>Mascotas</a>
-                            <div id="submenu-2" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'mascota_crear' %}">Registrar</a>
-                                        <a class="nav-link" href="{% url 'mascota_listar' %}">Listado<span
-                                                class="badge badge-secondary">New</span></a>
-                                    </li>
-
-                                </ul>
-                            </div>
+                            <a class="nav-link" href="{% url 'mascota_listar' %}" aria-expanded="false"
+                               data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-paw"></i>Mis Mascotas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                               data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-user"></i>Usuarios</a>
-                            <div id="submenu-3" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'propietario_form' %}">Agregar</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'propietario_listar' %}">Listado</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                               data-target="#submenu-4" aria-controls="submenu-4"><i
-                                    class="fas fa-calendar-check"></i>Citas</a>
-                            <div id="submenu-4" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Registrar</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Listado</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <a class="nav-link" href="{% url 'listar' %}" aria-expanded="false" data-target="#submenu-4"
+                               aria-controls="submenu-4"><i class="fas fa-calendar-check"></i>Mis Citas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                               data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-user-md"></i>Veterinarios</a>
-                            <div id="submenu-5" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'veterinario_listar' %}">Listado</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'veterinario_form' %}">Registrar</a>
-                                    </li>
-
-                                </ul>
-                            </div>
+                            <a class="nav-link" href="{% url 'profile_detalles' user.pk %}" aria-expanded="false"
+                               data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-user"></i>Mi
+                                Perfil</a>
                         </li>
                     </ul>
                 </div>
+                </li>
+                </ul>
             </nav>
         </div>
     </div>
@@ -155,9 +106,9 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="text-md-right footer-links d-none d-sm-block">
-                            <a href="javascript: void(0);">About</a>
-                            <a href="javascript: void(0);">Support</a>
-                            <a href="javascript: void(0);">Contact Us</a>
+                            <a href="javascript: void(0);">Acerca</a>
+                            <a href="javascript: void(0);">Soporte</a>
+                            <a href="javascript: void(0);">Contacto</a>
                         </div>
                     </div>
                 </div>
@@ -172,12 +123,11 @@
 <!-- end main wrapper -->
 <!-- ============================================================== -->
 <!-- Optional JavaScript -->
-<script src="{% static 'assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
-<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
-<script src="{% static 'assets/vendor/slimscroll/jquery.slimscroll.js' %}"></script>
-<script src="{% static 'assets/libs/js/main-js.js' %}"></script>
-{% block scripts %}
-
+{% block script %}
+    <script src="{% static 'assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/vendor/slimscroll/jquery.slimscroll.js' %}"></script>
+    <script src="{% static 'assets/libs/js/main-js.js' %}"></script>
 {% endblock %}
 </body>
 

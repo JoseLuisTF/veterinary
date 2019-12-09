@@ -3,22 +3,24 @@
     Registrar Propietario
 {% endblock %}
 {% block content %}
-        <form method="post" >
+    <form method="post">
         {% csrf_token %}
-
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Informacion Propietario
-                                    </div>
-                                    <div class="card-body">
-                                        {{ form.as_p }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-space btn-primary">Guardar</button>
-                        <a href="{% url 'propietario_listar' %}" class="btn btn-space btn-secondary">Cancelar</a>
-        </form>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Informacion Propietario
+                    </div>
+                    <div class="card-body">
+                        <p><label for="document">Documento:</label>
+                            <input type="text" name="document" value="{{ profile.user.username }}" class="form-control"
+                                   maxlength="100" readonly></p>
+                        {{ form.as_p }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-space btn-primary">Guardar</button>
+        <a href="{% url 'profile_detalles' profile.pk %}" class="btn btn-space btn-secondary">Cancelar</a>
+    </form>
 {% endblock %}

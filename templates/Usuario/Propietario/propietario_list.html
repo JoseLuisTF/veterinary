@@ -3,7 +3,7 @@
     Listado Propietarios
 {% endblock %}
 {% block content %}
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="card">
             <h5 class="card-header">Listado Propietarios</h5>
             <div class="card-body">
@@ -29,7 +29,8 @@
                                            class="btn btn-sm btn-outline-primary">Info</a>
                                         <a href="{% url 'propietario_actualizar' propietario.pk %}"
                                            class="btn btn-sm btn-outline-warning">Editar</a>
-                                        <a href="{% url 'propietario_eliminar' propietario.pk %}" class="btn btn-sm btn-outline-danger">
+                                        <a href="{% url 'propietario_eliminar' propietario.pk %}"
+                                           class="btn btn-sm btn-outline-danger">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
                                     </td>
